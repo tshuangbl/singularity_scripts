@@ -19,8 +19,6 @@ set -exuo pipefail
 
 cd ${OUTDIR}
 
-zcat /data/input/Read1.fq.gz | head -n 8
-
 tapestri dna run --output-folder ${OUTDIR} --output-prefix ${MB_SAMPNAME} \
   --r1 /data/input/Read1.fq.gz --r2 /data/input/Read2.fq.gz  \
   --config ${CONFDIR}/conf.yaml \
