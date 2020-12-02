@@ -20,6 +20,6 @@ set -exuo pipefail
 cd ${OUTDIR}
 
 tapestri dna run --input ${CONFDIR}/${MB_DNA_CONF} \
-  --dir-yaml ${CONFDIR}/${MB_DNA_YAML} --dir-info ${CONFDIR}/${MB_DNA_info} \
+  --dir-yaml ${CONFDIR}/${MB_DNA_YAML} --dir-info ${CONFDIR}/${MB_DNA_INFO} \
   --output-folder ${OUTDIR}/${MB_SAMPNAME} --qc --no-overwrite
 
