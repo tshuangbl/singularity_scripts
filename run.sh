@@ -19,7 +19,7 @@ set -exuo pipefail
 
 cd ${OUTDIR}
 
-tapestri dna run --input ${CONFDIR}/${MB_DNA_CONF} \
-  --dir-yaml ${CONFDIR}/${MB_DNA_YAML} --dir-info ${CONFDIR}/${MB_DNA_INFO} \
-  --output-folder ${OUTDIR}/${MB_SAMPNAME} --qc --no-overwrite
-
+tapestri dna run --output-folder ${OUTDIR} --output-prefix ${MB_SAMPNAME} \
+  --r1 /data/input/Read1.fq.gz --r2 /data/input/Read2.fq.gz  \
+  --config ${CONFDIR}/conf.yaml \
+  --qc --part1-only --overwrite --n-cores 12 
